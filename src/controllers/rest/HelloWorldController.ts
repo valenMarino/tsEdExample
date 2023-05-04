@@ -5,6 +5,11 @@ import {Get} from "@tsed/schema";
 export class HelloWorldController {
   @Get("/")
   get() {
-    return "hello";
+    return {name:'book1',price:10};
+  }
+
+  @Get("/all")
+  getAll() {
+    return [{name:'book1',price:10},{name:'book2',price:13}];
   }
 }
